@@ -47,4 +47,5 @@ public void write(byte b[]) throws IOException
 通过分析输入和输出流的API文档，我们发现读和写操作都是同步阻塞的，阻塞时间取决于对方的I/O线程处理速度和网络I/O的传播速度。
 
 ## Non block I/O
-与Socket和SocketServer类相对应，NIO 也提供的SocketChannel和ServerSocketChannel两种不同的套接字通道实现
+与Socket和SocketServer类相对应，NIO 也提供的SocketChannel和ServerSocketChannel两种不同的套接字通道实现.这两种新增的通道都支持阻塞和非阻塞两种模式。阻塞模式使用非常简单，但是性能和可靠性都不好。
+非阻塞模式恰好相反。
